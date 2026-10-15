@@ -8,7 +8,7 @@ import java.time.temporal.ChronoUnit
 
 /** How long a capsule stays sealed. */
 object Lock {
-    /** Presets offered everywhere, in days. 30 means one calendar month, multiples of 365 whole years. */
+    /** Presets offered everywhere, in days. Multiples of 365 are whole years, multiples of 30 calendar months. */
     val presets = listOf(7, 30, 365, 5 * 365, 10 * 365, 30 * 365)
 
     /** The moment [days] after [from]: whole months and years follow the calendar, so a year is a year. */
@@ -16,7 +16,7 @@ object Lock {
         val z = Instant.ofEpochMilli(from).atZone(zone)
         val t: ZonedDateTime = when {
             days >= 365 && days % 365 == 0 -> z.plusYears((days / 365).toLong())
-            days == 30 -> z.plusMonths(1)
+            days >= 30 && days % 30 == 0 -> z.plusMonths((days / 30).toLong())
             else -> z.plusDays(days.toLong())
         }
         return t.toInstant().toEpochMilli()

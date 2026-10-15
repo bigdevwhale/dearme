@@ -390,3 +390,35 @@ fun FutureDateDialog(initial: Long, onDismiss: () -> Unit, onPicked: (Long) -> U
         colors = androidx.compose.material3.DatePickerDefaults.colors(containerColor = U.c.bg),
     ) { androidx.compose.material3.DatePicker(state, showModeToggle = true) }
 }
+
+/** "Opens after N days / weeks / months / years"; the result is in days (months as 30, years as 365, see Lock). */
+@Composable
+fun LockDialog(initialDays: Int, onDismiss: () -> Unit, onPicked: (Int) -> Unit) {
+    val units = listOf(1, 7, 30, 365)
+    val startUnit = units.lastOrNull { initialDays > 0 && initialDays % it == 0 } ?: 365
+    var unit by remember { mutableStateOf(startUnit) }
+    var count by remember { mutableStateOf(if (initialDays > 0) (initialDays / startUnit).toString() else "2") }
+    val n = count.toIntOrNull()?.takeIf { it in 1..(if (unit == 365) 100 else 1200) }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = U.c.bg,
+        title = { Text(stringResource(R.string.custom_lock_title), style = UType.Strong.copy(fontSize = 19.sp)) },
+        text = {
+            Column {
+                UTextField(count, { count = it.filter(Char::isDigit).take(4) }, number = true)
+                Spacer(Modifier.height(12.dp))
+                Segmented(
+                    units, unit,
+                    { stringResource(when (it) { 1 -> R.string.unit_days; 7 -> R.string.unit_weeks; 30 -> R.string.unit_months; else -> R.string.unit_years }) },
+                    { unit = it },
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = n != null, onClick = { n?.let { onPicked(it * unit) }; onDismiss() }) {
+                Text(stringResource(R.string.ok), color = if (n != null) U.c.accent else U.c.faint, style = UType.Button)
+            }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel), color = U.c.muted, style = UType.Button) } },
+    )
+}

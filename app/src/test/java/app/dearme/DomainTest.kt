@@ -101,6 +101,12 @@ class LockTest {
     }
 
     @Test
+    fun customMonthsFollowTheCalendar() {
+        assertEquals(LocalDateTime.of(2026, 4, 30, 12, 0).toInstant(zone).toEpochMilli(), Lock.openAt(start, 90, zone))
+        assertEquals(LocalDateTime.of(2026, 2, 10, 12, 0).toInstant(zone).toEpochMilli(), Lock.openAt(start, 10, zone))
+    }
+
+    @Test
     fun ladderGrows() {
         val day = 86_400_000L
         assertEquals(7, Lock.ladderDays(null, start))

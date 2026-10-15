@@ -122,7 +122,13 @@
     <string name="record_voice">Записать голос</string>
     <string name="recording">Идёт запись…</string>
     <string name="opens_in">Откроется через</string>
-    <string name="pick_date">Выбрать дату</string>
+    <string name="pick_date">Своя дата…</string>
+    <string name="custom_lock">Свой срок…</string>
+    <string name="custom_lock_title">Откроется через</string>
+    <string name="unit_days">Дни</string>
+    <string name="unit_weeks">Недели</string>
+    <string name="unit_months">Месяцы</string>
+    <string name="unit_years">Годы</string>
     <string name="opens_on_span">Откроется %1$s, %2$s</string>
     <string name="seal">Запечатать</string>
     <string name="seal_confirm_title">Запечатать до %s?</string>

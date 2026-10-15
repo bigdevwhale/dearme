@@ -97,7 +97,7 @@ object Words {
         return when {
             days == Ritual.LADDER -> context.getString(R.string.lock_ladder)
             days >= 365 && days % 365 == 0 -> r.getQuantityString(R.plurals.years, days / 365, days / 365)
-            days == 30 -> r.getQuantityString(R.plurals.months, 1, 1)
+            days % 30 == 0 -> r.getQuantityString(R.plurals.months, days / 30, days / 30)
             days % 7 == 0 -> r.getQuantityString(R.plurals.weeks, days / 7, days / 7)
             else -> r.getQuantityString(R.plurals.days, days, days)
         }

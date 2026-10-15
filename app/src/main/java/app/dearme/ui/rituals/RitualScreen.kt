@@ -67,6 +67,7 @@ import app.dearme.ui.Words
 import app.dearme.ui.components.Chip
 import app.dearme.ui.components.ConfirmDialog
 import app.dearme.ui.components.InfoRow
+import app.dearme.ui.components.LockDialog
 import app.dearme.ui.components.PrimaryButton
 import app.dearme.ui.components.SectionTitle
 import app.dearme.ui.components.Segmented
@@ -103,6 +104,7 @@ fun RitualScreen(id: Long, template: String, data: DearData, go: Go) {
     var timeField by remember { mutableStateOf<TimeField?>(null) }
     var pickDay by remember { mutableStateOf(false) }
     var confirmDelete by remember { mutableStateOf(false) }
+    var pickLock by remember { mutableStateOf(false) }
 
     val cur = r
     Column(Modifier.fillMaxSize().background(U.c.bg).statusBarsPadding().imePadding()) {
@@ -207,6 +209,8 @@ fun RitualScreen(id: Long, template: String, data: DearData, go: Go) {
             SectionTitle(stringResource(R.string.opens_after_title))
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Words.ritualLocks.forEach { d -> Chip(Words.lock(context, d), cur.lockDays == d, { set { it.copy(lockDays = d) } }) }
+                val custom = cur.lockDays != Ritual.LADDER && cur.lockDays !in Words.ritualLocks
+                Chip(if (custom) Words.lock(context, cur.lockDays) else stringResource(R.string.custom_lock), custom, { pickLock = true })
             }
             if (cur.lockDays == Ritual.LADDER) {
                 Spacer(Modifier.height(8.dp))
@@ -278,6 +282,7 @@ fun RitualScreen(id: Long, template: String, data: DearData, go: Go) {
                 colors = DatePickerDefaults.colors(containerColor = U.c.bg),
             ) { DatePicker(state, showModeToggle = false) }
         }
+        if (pickLock) LockDialog(cur.lockDays.coerceAtLeast(0), onDismiss = { pickLock = false }) { d -> set { it.copy(lockDays = d) } }
         if (confirmDelete) ConfirmDialog(
             title = stringResource(R.string.delete_ritual_title),
             text = stringResource(R.string.delete_ritual_text),

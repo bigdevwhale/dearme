@@ -108,7 +108,13 @@
     <string name="record_voice">Record a voice note</string>
     <string name="recording">Recording…</string>
     <string name="opens_in">Opens in</string>
-    <string name="pick_date">Pick a date</string>
+    <string name="pick_date">Any date…</string>
+    <string name="custom_lock">Custom…</string>
+    <string name="custom_lock_title">Opens after</string>
+    <string name="unit_days">Days</string>
+    <string name="unit_weeks">Weeks</string>
+    <string name="unit_months">Months</string>
+    <string name="unit_years">Years</string>
     <string name="opens_on_span">Opens on %1$s, %2$s</string>
     <string name="seal">Seal</string>
     <string name="seal_confirm_title">Seal until %s?</string>
