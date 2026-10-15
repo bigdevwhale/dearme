@@ -227,7 +227,7 @@
     <string name="tpl_random">Random moment</string>
     <string name="tpl_random_desc">Every day at a surprise time. Two minutes, both cameras, one line.</string>
     <string name="tpl_sunday">Sunday letter</string>
-    <string name="tpl_sunday_desc">Sunday at 21:00. A selfie and a letter that opens in a year.</string>
+    <string name="tpl_sunday_desc">Sunday evening. A selfie and a letter that opens in a year.</string>
     <string name="tpl_monthly">First of the month</string>
     <string name="tpl_monthly_desc">What you expect from the month, opened when it ends.</string>
     <string name="tpl_monthly_prompt">What do you expect from this month?</string>

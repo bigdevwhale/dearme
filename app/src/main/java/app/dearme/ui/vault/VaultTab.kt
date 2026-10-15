@@ -232,8 +232,6 @@ private fun ReadyCard(c: Capsule, data: DearData, onClick: () -> Unit) {
             Envelope(Modifier.width(96.dp), glow = true)
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {
-                Text(stringResource(R.string.ready_title), style = UType.Eyebrow.copy(color = U.c.gold))
-                Spacer(Modifier.height(4.dp))
                 Text(Words.capsuleTitle(context, c, data.ritualsById[c.ritualId ?: -1]), style = UType.Strong)
                 Text(stringResource(R.string.written_ago, Words.ago(context, c.createdAt, data.now)), style = UType.Muted)
             }

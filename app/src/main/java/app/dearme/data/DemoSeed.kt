@@ -108,9 +108,11 @@ object DemoSeed {
             val created = now - (i * 7 + 2) * DAY - 3 * HOUR
             add(Capsule(kind = Kind.LETTER, createdAt = created, openAt = created + 365 * DAY, text = "word ".repeat(120 + i * 40), ritualId = sundayId), scene = 3, selfie = true)
         }
-        for (i in 0 until 5) {
+        val recent = if (ru) listOf("Обед на бегу", "Кот спит на клавиатуре", "Закат с балкона", "Очередь в банке", "Читаю в парке")
+        else listOf("Lunch on the run", "The cat is asleep on my keyboard", "Sunset from the balcony", "Queue at the bank", "Reading in the park")
+        recent.forEachIndexed { i, line ->
             val created = now - (i + 1) * DAY - (i * 2 + 1) * HOUR
-            add(Capsule(kind = Kind.MOMENT, createdAt = created, openAt = created + 30 * DAY, text = "…", ritualId = randomId), scene = i % 5)
+            add(Capsule(kind = Kind.MOMENT, createdAt = created, openAt = created + 7 * DAY + 3 * HOUR, text = line, ritualId = randomId), scene = i % 5)
         }
         // Calls from the last days; one was missed.
         dao.insertCall(Call(ritualId = randomId, firedAt = now - 9 * DAY, deadline = now - 9 * DAY + 120_000, dismissed = true))

@@ -241,7 +241,7 @@
     <string name="tpl_random">Случайный момент</string>
     <string name="tpl_random_desc">Каждый день в неожиданное время. Две минуты, обе камеры, одна строка.</string>
     <string name="tpl_sunday">Воскресное письмо</string>
-    <string name="tpl_sunday_desc">Воскресенье, 21:00. Селфи и письмо, которое откроется через год.</string>
+    <string name="tpl_sunday_desc">Воскресный вечер. Селфи и письмо, которое откроется через год.</string>
     <string name="tpl_monthly">Первое число</string>
     <string name="tpl_monthly_desc">Чего ты ждёшь от месяца — откроется, когда он закончится.</string>
     <string name="tpl_monthly_prompt">Чего ты ждёшь от этого месяца?</string>

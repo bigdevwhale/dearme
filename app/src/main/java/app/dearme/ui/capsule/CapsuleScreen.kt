@@ -188,9 +188,10 @@ private fun Ready(c: Capsule, data: DearData, onOpening: () -> Unit, onOpened: (
     val flap = remember { Animatable(0f) }
     var checking by remember { mutableStateOf(false) }
     var clockWrong by remember { mutableStateOf(false) }
+    var opening by remember { mutableStateOf(false) }
 
     fun breakSeal() {
-        if (checking) return
+        if (checking || opening) return
         checking = true
         scope.launch {
             val ok = withContext(Dispatchers.IO) { Clock.verifyForOpening(context, container.settings) }
@@ -199,6 +200,8 @@ private fun Ready(c: Capsule, data: DearData, onOpening: () -> Unit, onOpened: (
                 clockWrong = true
                 return@launch
             }
+            checking = false
+            opening = true
             onOpening()
             if (data.settings.haptics) haptic.performHapticFeedback(HapticFeedbackType.LongPress)
             crack.animateTo(1f, tween(650, easing = FastOutSlowInEasing))
@@ -217,7 +220,7 @@ private fun Ready(c: Capsule, data: DearData, onOpening: () -> Unit, onOpened: (
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Envelope(Modifier.fillMaxWidth(0.86f).clickable(enabled = !checking) { breakSeal() }, open = flap.value, crack = crack.value, glow = crack.value == 0f)
+        Envelope(Modifier.fillMaxWidth(0.86f).clickable(enabled = !checking && !opening) { breakSeal() }, open = flap.value, crack = crack.value, glow = crack.value == 0f)
         Spacer(Modifier.height(34.dp))
         Text(stringResource(R.string.ready_title).uppercase(), style = UType.Eyebrow.copy(color = U.c.gold))
         Spacer(Modifier.height(8.dp))
@@ -226,7 +229,7 @@ private fun Ready(c: Capsule, data: DearData, onOpening: () -> Unit, onOpened: (
         Text(stringResource(R.string.written_on, Words.longDate(context, c.createdAt)), style = UType.Sub)
         Spacer(Modifier.height(32.dp))
         if (checking) CircularProgressIndicator(color = U.c.accent)
-        else PrimaryButton(stringResource(R.string.break_seal), { breakSeal() }, Modifier.fillMaxWidth())
+        else if (!opening) PrimaryButton(stringResource(R.string.break_seal), { breakSeal() }, Modifier.fillMaxWidth())
     }
 
     if (clockWrong) ConfirmDialog(

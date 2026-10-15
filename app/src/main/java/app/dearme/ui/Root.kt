@@ -206,7 +206,7 @@ private fun MainTabs(tab: Tab, onTab: (Tab) -> Unit, go: Go, data: DearData) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             NavItem(Icons.Rounded.Inventory2, stringResource(R.string.tab_vault), tab == Tab.VAULT) { onTab(Tab.VAULT) }
-            Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
+            Box(Modifier.weight(1.5f), contentAlignment = Alignment.Center) {
                 Row(
                     Modifier.shadow(6.dp, CircleShape).clip(CircleShape).background(U.c.accent).clickable { go.write() }.padding(horizontal = 20.dp, vertical = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
