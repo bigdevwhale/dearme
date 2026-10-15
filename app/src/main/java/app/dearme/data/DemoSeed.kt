@@ -49,9 +49,16 @@ object DemoSeed {
             return back to front
         }
 
-        suspend fun add(c: Capsule, scene: Int? = null, selfie: Boolean = true, now2: Int? = null) {
+        fun asset(path: String): String? = runCatching {
+            context.assets.open(path).use { Media.saveBitmap(context, android.graphics.BitmapFactory.decodeStream(it)) }
+        }.getOrNull()
+
+        suspend fun add(c: Capsule, scene: Int? = null, selfie: Boolean = true, now2: Int? = null, photo: Pair<String, String>? = null) {
             val id = dao.insertCapsule(c)
-            if (scene != null) {
+            val real = photo?.let { (b, f) -> asset(b)?.let { it to asset(f) } }
+            if (real != null) {
+                dao.insertPhoto(Photo(capsuleId = id, back = real.first, front = real.second, takenAt = c.createdAt))
+            } else if (scene != null) {
                 val (b, f) = shot(scene, c.createdAt.toInt(), selfie)
                 dao.insertPhoto(Photo(capsuleId = id, back = b, front = f, takenAt = c.createdAt))
             }
@@ -79,7 +86,7 @@ object DemoSeed {
                 text = if (ru) "Сегодня выпал первый снег, и я наконец купила тёплые ботинки. Интересно, ты всё ещё живёшь в этой квартире с жёлтыми окнами напротив?"
                 else "The first snow fell today and I finally bought warm boots. I wonder if you still live in this flat with the yellow windows across the street?",
             ),
-            scene = 2,
+            scene = 2, photo = "demo/snow.jpg" to "demo/selfie.jpg",
         )
         // Opened moments from the ladder.
         val lines = if (ru) listOf("Опять дождь, опять кофе.", "Первый снег! Мокрые ботинки.", "Ждём поезд, все уставшие и счастливые.", "Дедлайн в 18:00, сейчас 17:43.", "Просто сижу на балконе.")

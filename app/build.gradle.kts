@@ -60,6 +60,9 @@ android {
         compose = true
         buildConfig = true
     }
+    // Real photos for the demo letters ship only in demo builds.
+    if (demo) sourceSets["main"].assets.srcDir("src/demo/assets")
+
     androidResources {
         generateLocaleConfig = true
     }
