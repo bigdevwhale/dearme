@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tabs -->
+    <string name="tab_vault">Письма</string>
+    <string name="tab_rituals">Ритуалы</string>
+    <string name="write">Написать</string>
+
+    <!-- Common -->
+    <string name="back">Назад</string>
+    <string name="next">Дальше</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="ok">ОК</string>
+    <string name="done">Готово</string>
+    <string name="close">Закрыть</string>
+    <string name="remove">Убрать</string>
+    <string name="skip">Пропустить</string>
+    <string name="stop">Стоп</string>
+    <string name="none">Нет</string>
+    <string name="share">Поделиться</string>
+    <string name="settings">Настройки</string>
+    <string name="try_again">Попробовать ещё раз</string>
+    <string name="today_lower">сегодня</string>
+    <string name="tomorrow_lower">завтра</string>
+    <string name="ago">%s назад</string>
+    <string name="in_span">через %s</string>
+    <string name="countdown_days">%1$s д %2$s</string>
+    <string name="dear_me">Дорогой я,</string>
+    <string name="dear_name">Дорогой(ая) %s,</string>
+
+    <!-- Units -->
+    <plurals name="years">
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
+        <item quantity="other">%d года</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+        <item quantity="other">%d месяца</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d неделю</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
+        <item quantity="other">%d недели</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d час</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
+        <item quantity="other">%d часа</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d мин</item>
+        <item quantity="few">%d мин</item>
+        <item quantity="many">%d мин</item>
+        <item quantity="other">%d мин</item>
+    </plurals>
+    <plurals name="words">
+        <item quantity="one">%d слово</item>
+        <item quantity="few">%d слова</item>
+        <item quantity="many">%d слов</item>
+        <item quantity="other">%d слова</item>
+    </plurals>
+
+    <!-- Vault -->
+    <plurals name="letters_on_the_way">
+        <item quantity="one">%d письмо уже в пути к тебе</item>
+        <item quantity="few">%d письма уже в пути к тебе</item>
+        <item quantity="many">%d писем уже в пути к тебе</item>
+        <item quantity="other">%d письма уже в пути к тебе</item>
+    </plurals>
+    <string name="vault_empty_sub">Письма себе в будущее</string>
+    <string name="vault_all_opened">Все письма дошли. Пора написать новое?</string>
+    <string name="ready_to_open">Можно открыть</string>
+    <string name="ready_title">Можно открыть</string>
+    <string name="written_ago">Написано %s</string>
+    <string name="written_on">Написано %s</string>
+    <string name="next_opens_in">Следующее письмо откроется через</string>
+    <string name="on_the_way">В пути · %d</string>
+    <string name="opened_letters">Открытые</string>
+    <string name="filter_all">Все</string>
+    <string name="filter_letters">Письма</string>
+    <string name="filter_moments">Моменты</string>
+    <string name="sealed_opens">Откроется %s</string>
+    <string name="empty_title">Напиши тому, кем ты станешь</string>
+    <string name="empty_text">Запечатай письмо, фото или голос на год, пять, тридцать лет. Подсмотреть раньше срока не получится.</string>
+    <string name="write_first">Написать первое письмо</string>
+    <string name="letter_to_me">Себе, через %s</string>
+    <string name="moment">Момент</string>
+    <string name="reply_title">Ответ себе</string>
+    <string name="answer">Ответить</string>
+    <string name="call_left">Осталось %s, чтобы поймать момент</string>
+    <string name="call_late">Пропущено на %s — но поймать всё ещё стоит</string>
+    <string name="call_waiting">Позвал в %s</string>
+    <string name="backup_nudge_title">Письма есть только на этом телефоне</string>
+    <string name="backup_nudge_text">Запечатано: %d, а свежего бэкапа нет. Сохрани копию, чтобы потерянный телефон не унёс их с собой.</string>
+    <string name="backup_now">Сделать бэкап</string>
+    <string name="clock_suspect_title">Похоже, часы перевели</string>
+    <string name="clock_suspect_text">Дату или время на телефоне, кажется, меняли вручную, поэтому письма остаются запечатанными. Включи автоматические дату и время — всё наладится само.</string>
+
+    <!-- Write -->
+    <string name="new_letter">Новое письмо</string>
+    <string name="in_reply_to">В ответ на письмо от %s</string>
+    <string name="letter_placeholder">Напиши всё, что хочешь сказать себе будущему…</string>
+    <string name="line_placeholder">Одна строка о том, что сейчас…</string>
+    <string name="need_idea">Нет идей? Возьми вопрос</string>
+    <string name="another_question">Другой вопрос</string>
+    <string name="attach">Положить в конверт</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+    <string name="record_voice">Записать голос</string>
+    <string name="recording">Идёт запись…</string>
+    <string name="opens_in">Откроется через</string>
+    <string name="pick_date">Выбрать дату</string>
+    <string name="opens_on_span">Откроется %1$s, %2$s</string>
+    <string name="seal">Запечатать</string>
+    <string name="seal_confirm_title">Запечатать до %s?</string>
+    <string name="seal_confirm_text">После этого письмо нельзя прочитать или изменить до этого дня. Даже одним глазком.</string>
+    <string name="discard_title">Выбросить письмо?</string>
+    <string name="discard_text">Текст, снимки и запись пропадут.</string>
+    <string name="discard">Выбросить</string>
+    <string name="sealed_title">Запечатано</string>
+    <string name="see_you_on">Увидимся %s</string>
+    <string name="share_postcard">Поделиться открыткой</string>
+
+    <!-- Camera -->
+    <string name="camera_needed">DearMe нужна камера, чтобы поймать этот момент.</string>
+    <string name="camera_failed">Не получилось. Попробуй ещё раз.</string>
+    <string name="now_you">Теперь ты!</string>
+    <string name="retake">Переснять</string>
+    <string name="retake_left">Переснять (осталось %d)</string>
+    <string name="use_photo">Беру</string>
+    <string name="late_by">Опоздание %s</string>
+    <string name="late_stamp">Опоздание · %s</string>
+    <string name="mode_back">Задняя</string>
+    <string name="mode_front">Селфи</string>
+    <string name="mode_dual">Обе</string>
+    <string name="mode_any">На выбор</string>
+
+    <!-- Moment -->
+    <string name="take_photo">Сделать снимок</string>
+    <string name="moment_opens">Откроется через %s</string>
+    <string name="call_answered">На этот зов ты уже ответил(а). Он запечатан среди писем.</string>
+    <string name="call_gone">Этот зов уже ушёл. Следующий придёт, когда не ждёшь.</string>
+
+    <!-- Capsule -->
+    <string name="sealed_until">Запечатано до</string>
+    <string name="sealed_on">Запечатано %s</string>
+    <string name="answers_question">Ответ на вопрос</string>
+    <string name="from_you">От тебя, %s</string>
+    <string name="break_seal">Сломать печать</string>
+    <string name="clock_wrong_title">Ещё рано</string>
+    <string name="clock_wrong_text">Часы на телефоне выглядят неправильно, поэтому печать держится. Включи автоматические дату и время и попробуй снова.</string>
+    <string name="from_you_on">От тебя · %s</string>
+    <string name="travelled">Шло к тебе %s</string>
+    <string name="signature">— я, %s</string>
+    <string name="then_and_now">Тогда и сейчас</string>
+    <string name="then_and_now_text">Встань там же, где тогда, и сделай такой же снимок сегодня.</string>
+    <string name="take_now_photo">Сделать снимок сегодня</string>
+    <string name="this_answers">Это ответ на</string>
+    <string name="letter_from">Твоё письмо от %s</string>
+    <string name="your_replies">Твои ответы</string>
+    <string name="reply_sealed_until">Твой ответ · запечатан до %s</string>
+    <string name="reply">Ответить</string>
+    <string name="delete_title">Удалить письмо?</string>
+    <string name="delete_sealed_text">Оно ещё не дошло. Если удалить, ты его никогда не прочитаешь.</string>
+    <string name="delete_opened_text">Письмо, снимки и запись пропадут навсегда.</string>
+
+    <!-- Rituals -->
+    <string name="rituals_sub">Когда DearMe позовёт тебя оставить что-то на потом.</string>
+    <string name="add_ritual">Добавить ритуал</string>
+    <string name="next_call_day">Следующий зов: %s, время — сюрприз</string>
+    <string name="next_call_at">Следующий зов: %1$s в %2$s</string>
+    <string name="new_ritual">Новый ритуал</string>
+    <string name="edit_ritual">Ритуал</string>
+    <string name="ritual_name">Название</string>
+    <string name="when_title">Когда</string>
+    <string name="timing_random">Случайно</string>
+    <string name="timing_fixed">Точное время</string>
+    <string name="window_from">С</string>
+    <string name="window_to">До</string>
+    <string name="time">Время</string>
+    <string name="random_hint">Неожиданный момент внутри этого окна. Заранее не узнаешь.</string>
+    <string name="repeat_title">Повтор</string>
+    <string name="repeat_days">Дни</string>
+    <string name="repeat_monthly">Раз в месяц</string>
+    <string name="repeat_yearly">Раз в год</string>
+    <string name="day_of_month">Число месяца</string>
+    <string name="short_months_hint">В коротких месяцах — последний день.</string>
+    <string name="every_year_on">Каждый год</string>
+    <string name="pick_a_day">Выбери хотя бы один день.</string>
+    <string name="what_goes_in">Что внутри</string>
+    <string name="photo">Фото</string>
+    <string name="text">Текст</string>
+    <string name="text_line">Одна строка</string>
+    <string name="text_letter">Письмо</string>
+    <string name="voice_note">Голос</string>
+    <string name="voice_note_desc">До минуты твоего голоса</string>
+    <string name="question">Вопрос</string>
+    <string name="question_desc">Есть на что ответить, и не нужно смотреть на пустую страницу</string>
+    <string name="question_placeholder">Свой вопрос — или оставь пустым, и каждый раз будет новый</string>
+    <string name="two_minutes">Две минуты</string>
+    <string name="two_minutes_desc">Сними сразу. На опоздавших ответах будет штамп.</string>
+    <string name="needs_content">Выбери хотя бы фото, текст или голос.</string>
+    <string name="opens_after_title">Откроется через</string>
+    <string name="ladder_explain">Постепенно: сначала через неделю, потом через месяц, а после первого года с DearMe — через год. Так открывать есть что с самого начала.</string>
+    <string name="try_now">Попробовать сейчас</string>
+    <string name="try_now_desc">Сохранит ритуал и сразу тебя позовёт.</string>
+    <string name="delete_ritual_title">Удалить ритуал?</string>
+    <string name="delete_ritual_text">Он перестанет звать. Запечатанные письма останутся.</string>
+    <string name="every_day">Каждый день</string>
+    <string name="weekdays">По будням</string>
+    <string name="weekends">По выходным</string>
+    <string name="monthly_on">Каждое %d-е число</string>
+    <string name="yearly_on">Каждый год %s</string>
+    <string name="random_between">случайно с %1$s до %2$s</string>
+    <string name="at_time">в %s</string>
+    <string name="what_line">строка</string>
+    <string name="what_letter">письмо</string>
+    <string name="what_voice">голос</string>
+    <string name="opens_after">откроется через %s</string>
+    <string name="lock_ladder">Постепенно</string>
+    <string name="lock_ladder_short">открывается постепенно</string>
+    <string name="tpl_random">Случайный момент</string>
+    <string name="tpl_random_desc">Каждый день в неожиданное время. Две минуты, обе камеры, одна строка.</string>
+    <string name="tpl_sunday">Воскресное письмо</string>
+    <string name="tpl_sunday_desc">Воскресенье, 21:00. Селфи и письмо, которое откроется через год.</string>
+    <string name="tpl_monthly">Первое число</string>
+    <string name="tpl_monthly_desc">Чего ты ждёшь от месяца — откроется, когда он закончится.</string>
+    <string name="tpl_monthly_prompt">Чего ты ждёшь от этого месяца?</string>
+    <string name="tpl_birthday">Письмо на день рождения</string>
+    <string name="tpl_birthday_desc">Раз в год: селфи, голос и письмо на десять лет вперёд.</string>
+    <string name="tpl_custom">Мой ритуал</string>
+    <string name="tpl_custom_desc">Свои дни, время и содержимое.</string>
+
+    <!-- Onboarding -->
+    <string name="onb_title">Письма себе в будущее</string>
+    <string name="onb_text">Пиши сейчас — читай через год, пять или тридцать лет. Печать держится до нужного дня.</string>
+    <string name="onb_how">Как это работает</string>
+    <string name="onb_step1_title">Напиши письмо</string>
+    <string name="onb_step1_text">Слова, снимки и голос. Выбери, когда откроется: через месяц, год, тридцать лет, в любую дату.</string>
+    <string name="onb_step2_title">Лови случайные моменты</string>
+    <string name="onb_step2_text">В неожиданное время у тебя две минуты, чтобы снять, что происходит: обе камеры, одна строка.</string>
+    <string name="onb_step3_title">Сломай печать</string>
+    <string name="onb_step3_text">Когда придёт день — открой, сделай снимок «тогда и сейчас» и напиши ответ.</string>
+    <string name="onb_name_title">Кому письма?</string>
+    <string name="onb_name_text">Имя будет после «Дорогой». Можно оставить пустым.</string>
+    <string name="onb_name_hint">Твоё имя</string>
+    <string name="onb_moments_text">Каждый день в неожиданное время с 10:00 до 22:00</string>
+    <string name="onb_private">Всё остаётся на этом телефоне. Без аккаунта и облака.</string>
+    <string name="onb_begin">Начать</string>
+
+    <!-- Settings -->
+    <string name="perm_title">Включи уведомления</string>
+    <string name="perm_text">Без них ритуалы не смогут тебя позвать, и ты не узнаешь, что письмо открылось.</string>
+    <string name="exact_title">Разреши точные будильники</string>
+    <string name="exact_text">Чтобы случайный момент приходил минута в минуту, а не с опозданием.</string>
+    <string name="set_name">Имя</string>
+    <string name="set_name_text">Для строки «Дорогой …,» в начале писем.</string>
+    <string name="backup">Бэкап</string>
+    <string name="backup_text">Письма хранятся только на этом телефоне. Сохрани файл бэкапа в надёжное место (компьютер, облако) и восстанови его на новом телефоне. Запечатанные письма внутри останутся запечатанными.</string>
+    <string name="backup_last">Последний бэкап: %s</string>
+    <string name="backup_never">Бэкапа ещё нет</string>
+    <string name="backup_export">Сохранить бэкап</string>
+    <string name="backup_import">Восстановить</string>
+    <string name="backup_import_title">Восстановить из бэкапа?</string>
+    <string name="backup_import_text">Всё, что сейчас на телефоне, заменится содержимым бэкапа.</string>
+    <string name="backup_done">Бэкап сохранён</string>
+    <string name="backup_failed">Не получилось</string>
+    <string name="backup_restored">Восстановлено</string>
+    <string name="set_reliability">Надёжность</string>
+    <string name="autostart_title">Не приходят уведомления?</string>
+    <string name="autostart_text">Некоторые телефоны (Xiaomi, Huawei, Oppo…) останавливают приложения в фоне. Разреши DearMe автозапуск и сними ограничения батареи.</string>
+    <string name="clock_title">Проверка часов</string>
+    <string name="clock_ok_text">Часы на телефоне в порядке. Письма откроются в свой день, не раньше.</string>
+    <string name="set_feel">Ощущения</string>
+    <string name="set_haptics">Вибрация</string>
+    <string name="set_haptics_text">Лёгкий отклик, когда письмо запечатано или открыто</string>
+    <string name="set_appearance">Оформление</string>
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="language">Язык</string>
+    <string name="lang_system">Как в системе</string>
+    <string name="about">О приложении</string>
+    <string name="about_text">DearMe бесплатное: без рекламы, аккаунтов и слежки. Письма не покидают телефон, пока ты сам не сохранишь бэкап.</string>
+    <string name="about_version">Версия %s</string>
+
+    <!-- Notifications -->
+    <string name="channel_moments">Моменты</string>
+    <string name="channel_moments_desc">Ритуалы зовут поймать момент</string>
+    <string name="channel_letters">Письма</string>
+    <string name="channel_letters_desc">Когда запечатанное письмо можно открыть</string>
+    <string name="notif_moment_title">✉ Сейчас!</string>
+    <string name="notif_moment_text">%s: две минуты, чтобы снять, что происходит прямо сейчас.</string>
+    <string name="notif_ritual_text">Пора оставить что-то на потом.</string>
+    <string name="notif_opened_title">Открылось письмо из %s года</string>
+    <string name="notif_opened_text">Ты написал(а) его %s. Сломай печать.</string>
+    <plurals name="notif_opened_many">
+        <item quantity="one">Открылось %d письмо</item>
+        <item quantity="few">Открылось %d письма</item>
+        <item quantity="many">Открылось %d писем</item>
+        <item quantity="other">Открылось %d письма</item>
+    </plurals>
+    <string name="notif_opened_many_text">Ты из прошлого не терял(а) времени. Ломай печати.</string>
+
+    <!-- Share cards -->
+    <string name="share_footer">DEARME · ПИСЬМА СЕБЕ В БУДУЩЕЕ</string>
+    <string name="share_dear_me">Дорогой я,</string>
+    <string name="share_sealed_title">Я запечатал(а) письмо себе</string>
+    <string name="share_opens_on">Оно откроется</string>
+    <string name="share_from_me">От меня, %s назад</string>
+    <string name="share_then_now">Тогда и сейчас</string>
+</resources>

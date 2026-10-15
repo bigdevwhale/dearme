@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Back of the envelope -->
+    <path
+        android:fillColor="#E2D0AE"
+        android:pathData="M30,37h48a2,2 0,0 1,2 2v32a2,2 0,0 1,-2 2h-48a2,2 0,0 1,-2 -2v-32a2,2 0,0 1,2 -2z" />
+    <!-- Front pocket -->
+    <path
+        android:fillColor="#F1E4CC"
+        android:pathData="M28,43L54,61L80,43V71a2,2 0,0 1,-2 2H30a2,2 0,0 1,-2 -2Z" />
+    <!-- Flap -->
+    <path
+        android:fillColor="#F7EEDC"
+        android:pathData="M29,37.5h50L54,58Z" />
+    <!-- Wax seal -->
+    <path
+        android:fillColor="#B3342F"
+        android:pathData="M54,49.5a8.5,8.5 0,1 1,0 17a8.5,8.5 0,1 1,0 -17z" />
+    <path
+        android:fillColor="#7E1F1C"
+        android:pathData="M54,61.4C51.2,59.6 49.9,57.8 50.6,56.2C51.2,54.8 53,54.6 54,55.9C55,54.6 56.8,54.8 57.4,56.2C58.1,57.8 56.8,59.6 54,61.4Z" />
+</vector>

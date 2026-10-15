@@ -1,0 +1,98 @@
+package app.dearme.content
+
+import java.util.Locale
+import kotlin.random.Random
+
+/** Questions that make a letter worth opening years later. */
+object Prompts {
+    private val en = listOf(
+        "What are you most afraid of right now?",
+        "What made you smile today?",
+        "What do you hope has changed by the time you read this?",
+        "What do you hope has stayed exactly the same?",
+        "Who is the most important person in your life right now?",
+        "What are you working on, and why does it matter to you?",
+        "What do you worry about that probably won't matter in a year?",
+        "What would you like to ask your future self?",
+        "What does a perfect ordinary day look like for you now?",
+        "What are you proud of that nobody knows about?",
+        "What song is stuck in your head these days?",
+        "What do you do when you can't sleep?",
+        "What is the best thing you ate this week?",
+        "Where do you see yourself when you open this?",
+        "What advice would you give yourself a year ago?",
+        "What are you avoiding?",
+        "What small thing are you grateful for today?",
+        "What is one promise you want to keep until you read this?",
+        "What do you love about where you live?",
+        "What are you reading, watching or listening to?",
+        "What is the hardest thing you're going through?",
+        "Which habit do you want to have by then?",
+        "What would you do if you weren't afraid?",
+        "Describe the view from where you're sitting.",
+        "What made you angry lately, and was it worth it?",
+        "What does home mean to you right now?",
+        "What did you learn this month?",
+        "Who do you miss?",
+        "What do you want to forgive yourself for?",
+        "What is your biggest dream right now — the honest one?",
+        "What do your mornings look like?",
+        "What do you spend too much time on?",
+        "What would make this year a good one?",
+        "What do you think future you will laugh at?",
+        "Which decision are you stuck on?",
+        "What does your phone's home screen look like?",
+        "How much money do you have, and how do you feel about it?",
+        "What did you dream about last night?",
+        "What do you want to tell yourself, no matter what happens?",
+        "What is the best thing about being exactly your age?",
+    )
+
+    private val ru = listOf(
+        "Чего ты сейчас боишься больше всего?",
+        "Что сегодня заставило тебя улыбнуться?",
+        "Что, надеешься, изменится к тому моменту, когда ты это прочитаешь?",
+        "Что, надеешься, останется точно таким же?",
+        "Кто сейчас самый важный человек в твоей жизни?",
+        "Над чем ты сейчас работаешь и почему это важно?",
+        "О чём ты переживаешь, что, скорее всего, будет неважно через год?",
+        "О чём хочется спросить себя в будущем?",
+        "Как сейчас выглядит твой идеальный обычный день?",
+        "Чем ты гордишься, хотя об этом никто не знает?",
+        "Какая песня у тебя сейчас крутится в голове?",
+        "Что ты делаешь, когда не можешь уснуть?",
+        "Что самое вкусное было у тебя на этой неделе?",
+        "Где ты видишь себя, когда откроешь это письмо?",
+        "Какой совет пригодился бы тебе год назад?",
+        "Что ты сейчас откладываешь?",
+        "За какую мелочь сегодня хочется сказать спасибо?",
+        "Какое обещание ты хочешь сдержать до того дня, как это прочитаешь?",
+        "Что ты любишь в месте, где живёшь?",
+        "Что ты сейчас читаешь, смотришь или слушаешь?",
+        "Что сейчас даётся тебе тяжелее всего?",
+        "Какая привычка должна у тебя появиться к тому времени?",
+        "Что ты сделаешь, когда перестанешь бояться?",
+        "Опиши, что видно оттуда, где ты сейчас сидишь.",
+        "Что тебя недавно разозлило — и стоило ли оно того?",
+        "Что для тебя сейчас значит «дом»?",
+        "Чему тебя научил этот месяц?",
+        "По кому ты скучаешь?",
+        "За что ты хочешь себя простить?",
+        "Какая у тебя сейчас самая большая мечта — честно?",
+        "Как выглядят твои утра?",
+        "На что ты тратишь слишком много времени?",
+        "Что сделает этот год хорошим?",
+        "Над чем, как думаешь, ты посмеёшься, когда это прочитаешь?",
+        "Какое решение ты никак не можешь принять?",
+        "Как выглядит главный экран твоего телефона?",
+        "Сколько у тебя денег и что ты об этом чувствуешь?",
+        "Что тебе снилось этой ночью?",
+        "Что ты хочешь сказать себе, что бы ни случилось?",
+        "Что самое классное в том, чтобы быть именно в твоём возрасте?",
+    )
+
+    fun all(locale: Locale): List<String> = if (locale.language == "ru") ru else en
+
+    fun random(locale: Locale, except: String = "", random: Random = Random.Default): String =
+        all(locale).filter { it != except }.random(random)
+}

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">DearMe</string>
+
+    <!-- Tabs -->
+    <string name="tab_vault">Letters</string>
+    <string name="tab_rituals">Rituals</string>
+    <string name="write">Write</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="done">Done</string>
+    <string name="close">Close</string>
+    <string name="remove">Remove</string>
+    <string name="skip">Skip</string>
+    <string name="stop">Stop</string>
+    <string name="none">None</string>
+    <string name="share">Share</string>
+    <string name="settings">Settings</string>
+    <string name="try_again">Try again</string>
+    <string name="today_lower">today</string>
+    <string name="tomorrow_lower">tomorrow</string>
+    <string name="ago">%s ago</string>
+    <string name="in_span">in %s</string>
+    <string name="countdown_days">%1$s d %2$s</string>
+    <string name="dear_me">Dear me,</string>
+    <string name="dear_name">Dear %s,</string>
+
+    <!-- Units -->
+    <plurals name="years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="words">
+        <item quantity="one">%d word</item>
+        <item quantity="other">%d words</item>
+    </plurals>
+
+    <!-- Vault -->
+    <plurals name="letters_on_the_way">
+        <item quantity="one">%d letter is on its way to you</item>
+        <item quantity="other">%d letters are on their way to you</item>
+    </plurals>
+    <string name="vault_empty_sub">Letters to your future self</string>
+    <string name="vault_all_opened">Every letter has reached you. Time for a new one?</string>
+    <string name="ready_to_open">Ready to open</string>
+    <string name="ready_title">Ready to open</string>
+    <string name="written_ago">Written %s</string>
+    <string name="written_on">Written %s</string>
+    <string name="next_opens_in">Next letter opens in</string>
+    <string name="on_the_way">On the way · %d</string>
+    <string name="opened_letters">Opened</string>
+    <string name="filter_all">All</string>
+    <string name="filter_letters">Letters</string>
+    <string name="filter_moments">Moments</string>
+    <string name="sealed_opens">Opens %s</string>
+    <string name="empty_title">Write to the person you\'ll be</string>
+    <string name="empty_text">Seal a letter, a photo or your voice for a year, five, thirty. You won\'t be able to peek until the day comes.</string>
+    <string name="write_first">Write your first letter</string>
+    <string name="letter_to_me">To me, in %s</string>
+    <string name="moment">Moment</string>
+    <string name="reply_title">Reply to myself</string>
+    <string name="answer">Answer</string>
+    <string name="call_left">%s left to capture it</string>
+    <string name="call_late">Missed by %s — still worth catching</string>
+    <string name="call_waiting">Called at %s</string>
+    <string name="backup_nudge_title">Your letters live only on this phone</string>
+    <string name="backup_nudge_text">%d sealed and no recent backup. Save a copy so a lost phone doesn\'t lose them.</string>
+    <string name="backup_now">Back up</string>
+    <string name="clock_suspect_title">The clock looks changed</string>
+    <string name="clock_suspect_text">The phone\'s date or time seems to have been changed by hand, so letters stay sealed. Turn on automatic date and time; it will sort itself out.</string>
+
+    <!-- Write -->
+    <string name="new_letter">New letter</string>
+    <string name="in_reply_to">In reply to your letter from %s</string>
+    <string name="letter_placeholder">Write whatever you want your future self to know…</string>
+    <string name="line_placeholder">One line about right now…</string>
+    <string name="need_idea">Need an idea? Get a question</string>
+    <string name="another_question">Another question</string>
+    <string name="attach">Add to the envelope</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="record_voice">Record a voice note</string>
+    <string name="recording">Recording…</string>
+    <string name="opens_in">Opens in</string>
+    <string name="pick_date">Pick a date</string>
+    <string name="opens_on_span">Opens on %1$s, %2$s</string>
+    <string name="seal">Seal</string>
+    <string name="seal_confirm_title">Seal until %s?</string>
+    <string name="seal_confirm_text">Once sealed, you can\'t read or change it until that day. Not even a peek.</string>
+    <string name="discard_title">Throw this letter away?</string>
+    <string name="discard_text">What you wrote, shot and recorded will be gone.</string>
+    <string name="discard">Throw away</string>
+    <string name="sealed_title">Sealed</string>
+    <string name="see_you_on">See you on %s</string>
+    <string name="share_postcard">Share a postcard</string>
+
+    <!-- Camera -->
+    <string name="camera_needed">DearMe needs the camera to capture this moment.</string>
+    <string name="camera_failed">That didn\'t work. Try again.</string>
+    <string name="now_you">Now you!</string>
+    <string name="retake">Retake</string>
+    <string name="retake_left">Retake (%d left)</string>
+    <string name="use_photo">Use it</string>
+    <string name="late_by">Late by %s</string>
+    <string name="late_stamp">Late · %s</string>
+    <string name="mode_back">Back</string>
+    <string name="mode_front">Selfie</string>
+    <string name="mode_dual">Both</string>
+    <string name="mode_any">Your choice</string>
+
+    <!-- Moment -->
+    <string name="take_photo">Take the photo</string>
+    <string name="moment_opens">Opens in %s</string>
+    <string name="call_answered">You already answered this one. It\'s sealed in your letters.</string>
+    <string name="call_gone">This call is gone. The next one will come at a time you don\'t expect.</string>
+
+    <!-- Capsule -->
+    <string name="sealed_until">Sealed until</string>
+    <string name="sealed_on">Sealed on %s</string>
+    <string name="answers_question">Answers the question</string>
+    <string name="from_you">From you, %s</string>
+    <string name="break_seal">Break the seal</string>
+    <string name="clock_wrong_title">Not yet</string>
+    <string name="clock_wrong_text">The phone\'s clock doesn\'t look right, so the seal holds. Turn on automatic date and time and try again.</string>
+    <string name="from_you_on">From you · %s</string>
+    <string name="travelled">Travelled %s to reach you</string>
+    <string name="signature">— me, %s</string>
+    <string name="then_and_now">Then &amp; now</string>
+    <string name="then_and_now_text">Stand where you stood and take the same shot today.</string>
+    <string name="take_now_photo">Take today\'s shot</string>
+    <string name="this_answers">This answers</string>
+    <string name="letter_from">Your letter from %s</string>
+    <string name="your_replies">Your replies</string>
+    <string name="reply_sealed_until">Your reply · sealed until %s</string>
+    <string name="reply">Reply</string>
+    <string name="delete_title">Delete this letter?</string>
+    <string name="delete_sealed_text">It hasn\'t reached you yet. Deleting it means you\'ll never read it.</string>
+    <string name="delete_opened_text">The letter, its photos and voice note will be gone for good.</string>
+
+    <!-- Rituals -->
+    <string name="rituals_sub">When DearMe should call you to leave something for later.</string>
+    <string name="add_ritual">Add a ritual</string>
+    <string name="next_call_day">Next call: %s, at a surprise time</string>
+    <string name="next_call_at">Next call: %1$s at %2$s</string>
+    <string name="new_ritual">New ritual</string>
+    <string name="edit_ritual">Ritual</string>
+    <string name="ritual_name">Name</string>
+    <string name="when_title">When</string>
+    <string name="timing_random">Random time</string>
+    <string name="timing_fixed">Exact time</string>
+    <string name="window_from">From</string>
+    <string name="window_to">To</string>
+    <string name="time">Time</string>
+    <string name="random_hint">A surprise moment inside this window. You\'ll never know when.</string>
+    <string name="repeat_title">Repeat</string>
+    <string name="repeat_days">Days</string>
+    <string name="repeat_monthly">Monthly</string>
+    <string name="repeat_yearly">Yearly</string>
+    <string name="day_of_month">Day of the month</string>
+    <string name="short_months_hint">In shorter months, the last day.</string>
+    <string name="every_year_on">Every year on</string>
+    <string name="pick_a_day">Pick at least one day.</string>
+    <string name="what_goes_in">What goes in</string>
+    <string name="photo">Photo</string>
+    <string name="text">Text</string>
+    <string name="text_line">One line</string>
+    <string name="text_letter">A letter</string>
+    <string name="voice_note">Voice note</string>
+    <string name="voice_note_desc">Up to a minute of your voice</string>
+    <string name="question">A question</string>
+    <string name="question_desc">Something to answer, so you\'re never staring at a blank page</string>
+    <string name="question_placeholder">Your own question, or leave empty for a new one each time</string>
+    <string name="two_minutes">Two minutes</string>
+    <string name="two_minutes_desc">Capture it right away. Late answers get a stamp.</string>
+    <string name="needs_content">Choose at least a photo, text or voice.</string>
+    <string name="opens_after_title">Opens after</string>
+    <string name="ladder_explain">Step by step: a week at first, then a month, and after your first year with DearMe, a full year. So there is something to open from the very start.</string>
+    <string name="try_now">Try it now</string>
+    <string name="try_now_desc">Saves the ritual and calls you right away.</string>
+    <string name="delete_ritual_title">Delete this ritual?</string>
+    <string name="delete_ritual_text">It will stop calling. Letters already sealed stay.</string>
+    <string name="every_day">Every day</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="weekends">Weekends</string>
+    <string name="monthly_on">Monthly on day %d</string>
+    <string name="yearly_on">Every year on %s</string>
+    <string name="random_between">random between %1$s and %2$s</string>
+    <string name="at_time">at %s</string>
+    <string name="what_line">a line</string>
+    <string name="what_letter">a letter</string>
+    <string name="what_voice">voice</string>
+    <string name="opens_after">opens in %s</string>
+    <string name="lock_ladder">Step by step</string>
+    <string name="lock_ladder_short">opens step by step</string>
+    <string name="tpl_random">Random moment</string>
+    <string name="tpl_random_desc">Every day at a surprise time. Two minutes, both cameras, one line.</string>
+    <string name="tpl_sunday">Sunday letter</string>
+    <string name="tpl_sunday_desc">Sunday at 21:00. A selfie and a letter that opens in a year.</string>
+    <string name="tpl_monthly">First of the month</string>
+    <string name="tpl_monthly_desc">What you expect from the month, opened when it ends.</string>
+    <string name="tpl_monthly_prompt">What do you expect from this month?</string>
+    <string name="tpl_birthday">Birthday letter</string>
+    <string name="tpl_birthday_desc">Once a year: a selfie, your voice and a letter for ten years later.</string>
+    <string name="tpl_custom">My ritual</string>
+    <string name="tpl_custom_desc">Your own days, time and contents.</string>
+
+    <!-- Onboarding -->
+    <string name="onb_title">Letters to your future self</string>
+    <string name="onb_text">Write now, read in a year, five or thirty. The seal holds until the day comes.</string>
+    <string name="onb_how">How it works</string>
+    <string name="onb_step1_title">Write a letter</string>
+    <string name="onb_step1_text">Words, photos and your voice. Pick when it opens: a month, a year, thirty years, any date.</string>
+    <string name="onb_step2_title">Catch random moments</string>
+    <string name="onb_step2_text">At a surprise time you get two minutes to capture what\'s happening: both cameras, one line.</string>
+    <string name="onb_step3_title">Break the seal</string>
+    <string name="onb_step3_text">When the day comes, open it, take a \"then &amp; now\" shot and write back.</string>
+    <string name="onb_name_title">Who are the letters for?</string>
+    <string name="onb_name_text">Your name goes after \"Dear\". You can leave it empty.</string>
+    <string name="onb_name_hint">Your name</string>
+    <string name="onb_moments_text">Every day at a surprise time between 10:00 and 22:00</string>
+    <string name="onb_private">Everything stays on this phone. No account, no cloud.</string>
+    <string name="onb_begin">Begin</string>
+
+    <!-- Settings -->
+    <string name="perm_title">Turn on notifications</string>
+    <string name="perm_text">Without them, rituals can\'t call you and you won\'t know when a letter opens.</string>
+    <string name="exact_title">Allow exact alarms</string>
+    <string name="exact_text">So a random moment rings right on time instead of a few minutes late.</string>
+    <string name="set_name">Name</string>
+    <string name="set_name_text">Used in \"Dear …,\" at the top of your letters.</string>
+    <string name="backup">Backup</string>
+    <string name="backup_text">Letters live only on this phone. Save a backup file somewhere safe (your computer, cloud storage) and restore it on a new phone. Sealed letters stay sealed inside it.</string>
+    <string name="backup_last">Last backup: %s</string>
+    <string name="backup_never">No backup yet</string>
+    <string name="backup_export">Save backup</string>
+    <string name="backup_import">Restore</string>
+    <string name="backup_import_title">Restore from backup?</string>
+    <string name="backup_import_text">Everything on this phone will be replaced by the backup.</string>
+    <string name="backup_done">Backup saved</string>
+    <string name="backup_failed">That didn\'t work</string>
+    <string name="backup_restored">Restored</string>
+    <string name="set_reliability">Reliability</string>
+    <string name="autostart_title">Calls don\'t arrive?</string>
+    <string name="autostart_text">Some phones (Xiaomi, Huawei, Oppo…) stop apps in the background. Allow autostart and remove battery limits for DearMe.</string>
+    <string name="clock_title">Clock check</string>
+    <string name="clock_ok_text">The phone\'s clock looks right. Letters open on their day, not before.</string>
+    <string name="set_feel">Feel</string>
+    <string name="set_haptics">Vibration</string>
+    <string name="set_haptics_text">A soft tap when a letter is sealed or opened</string>
+    <string name="set_appearance">Appearance</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="language">Language</string>
+    <string name="lang_system">System</string>
+    <string name="about">About</string>
+    <string name="about_text">DearMe is free, with no ads, accounts or tracking. Your letters never leave the phone unless you save a backup.</string>
+    <string name="about_version">Version %s</string>
+
+    <!-- Notifications -->
+    <string name="channel_moments">Moments</string>
+    <string name="channel_moments_desc">Rituals calling you to capture a moment</string>
+    <string name="channel_letters">Letters</string>
+    <string name="channel_letters_desc">When a sealed letter can be opened</string>
+    <string name="notif_moment_title">✉ Now!</string>
+    <string name="notif_moment_text">%s: two minutes to capture what\'s happening right now.</string>
+    <string name="notif_ritual_text">Time to leave something for later.</string>
+    <string name="notif_opened_title">A letter from %s just opened</string>
+    <string name="notif_opened_text">You wrote it %s. Break the seal.</string>
+    <plurals name="notif_opened_many">
+        <item quantity="one">%d letter just opened</item>
+        <item quantity="other">%d letters just opened</item>
+    </plurals>
+    <string name="notif_opened_many_text">Your past self has been busy. Break the seals.</string>
+
+    <!-- Share cards -->
+    <string name="share_footer">DEARME · LETTERS TO YOUR FUTURE SELF</string>
+    <string name="share_dear_me">Dear me,</string>
+    <string name="share_sealed_title">I sealed a letter to myself</string>
+    <string name="share_opens_on">It opens on</string>
+    <string name="share_from_me">From me, %s ago</string>
+    <string name="share_then_now">Then &amp; now</string>
+</resources>
