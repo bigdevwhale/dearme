@@ -206,7 +206,7 @@
     <string name="two_minutes_desc">Capture it right away. Late answers get a stamp.</string>
     <string name="needs_content">Choose at least a photo, text or voice.</string>
     <string name="opens_after_title">Opens after</string>
-    <string name="ladder_explain">Step by step: a week at first, then a month, and after your first year with DearMe, a full year. So there is something to open from the very start.</string>
+    <string name="ladder_explain">The wait grows as you go: in your first 4 weeks with DearMe moments open after a week, until your first year after a month, then after a year. So there is something to open from the very start.</string>
     <string name="try_now">Try it now</string>
     <string name="try_now_desc">Saves the ritual and calls you right away.</string>
     <string name="delete_ritual_title">Delete this ritual?</string>
@@ -224,6 +224,7 @@
     <string name="opens_after">opens in %s</string>
     <string name="lock_ladder">Step by step</string>
     <string name="lock_ladder_short">opens step by step</string>
+    <string name="ladder_note">Step by step: %1$s for now; from %2$s, %3$s.</string>
     <string name="tpl_random">Random moment</string>
     <string name="tpl_random_desc">Every day at a surprise time. Two minutes, both cameras, one line.</string>
     <string name="tpl_sunday">Sunday letter</string>

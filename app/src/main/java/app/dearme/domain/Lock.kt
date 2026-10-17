@@ -35,6 +35,17 @@ object Lock {
         }
     }
 
+    /** When the ladder moves to its next step (a month, then a year), or null once it is at a year. */
+    fun ladderNextStep(firstCapsule: Long?, now: Long): Long? {
+        val first = firstCapsule ?: now
+        val day = 86_400_000L
+        return when (ladderDays(firstCapsule, now)) {
+            7 -> first + 28 * day
+            30 -> first + 365 * day
+            else -> null
+        }
+    }
+
     fun daysFor(r: Ritual?, firstCapsule: Long?, now: Long): Int =
         if (r == null || r.lockDays == Ritual.LADDER) ladderDays(firstCapsule, now) else r.lockDays
 }

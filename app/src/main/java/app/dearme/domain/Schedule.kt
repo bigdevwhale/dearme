@@ -19,14 +19,17 @@ object Schedule {
         Repeat.YEARLY -> date.monthValue == r.month && date.dayOfMonth == r.monthDay.coerceIn(1, date.lengthOfMonth())
     }
 
-    /** The first call strictly after [after], or null when the ritual can never call (no days picked). */
-    fun next(r: Ritual, after: LocalDateTime, random: Random = Random.Default): LocalDateTime? {
+    /**
+     * The first call strictly after [after], or null when the ritual can never call (no days picked).
+     * [skip] is a day the ritual already called on: a ritual calls at most once a day.
+     */
+    fun next(r: Ritual, after: LocalDateTime, random: Random = Random.Default, skip: LocalDate? = null): LocalDateTime? {
         if (r.repeat == Repeat.WEEKLY && (r.days and Ritual.ALL_DAYS) == 0) return null
         val start = after.toLocalDate()
         // A yearly ritual on 29 February still lands within five years; nothing else needs that long.
         for (d in 0L..(366L * 5)) {
             val date = start.plusDays(d)
-            if (!matches(r, date)) continue
+            if (date == skip || !matches(r, date)) continue
             when (r.timing) {
                 Timing.FIXED -> {
                     val t = date.atTime(r.at / 60, r.at % 60)

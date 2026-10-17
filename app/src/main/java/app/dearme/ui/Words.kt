@@ -166,6 +166,13 @@ object Words {
         else -> context.getString(R.string.letter_to_me, span(context, c.createdAt, c.openAt))
     }
 
+    /** "A week for now; from 12 November, a month." Null when the ladder is at its last step. */
+    fun ladderNote(context: Context, firstCapsule: Long?, now: Long): String? {
+        val next = Lock.ladderNextStep(firstCapsule, now) ?: return null
+        val nextDays = if (Lock.ladderDays(firstCapsule, now) == 7) 30 else 365
+        return context.getString(R.string.ladder_note, lock(context, Lock.ladderDays(firstCapsule, now)), mediumDate(context, next), lock(context, nextDays))
+    }
+
     /** The default lock presets plus the ladder, in the order shown. */
     val ritualLocks: List<Int> = listOf(Ritual.LADDER) + Lock.presets
 }

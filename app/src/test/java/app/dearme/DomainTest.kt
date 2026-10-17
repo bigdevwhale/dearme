@@ -55,6 +55,16 @@ class ScheduleTest {
     }
 
     @Test
+    fun randomCallsOnceADay() {
+        val r = base.copy(timing = Timing.RANDOM, windowStart = 10 * 60, windowEnd = 22 * 60)
+        val firedAt = LocalDateTime.of(2026, 10, 15, 11, 0)
+        repeat(50) { seed ->
+            val t = Schedule.next(r, firedAt, Random(seed), skip = firedAt.toLocalDate())!!
+            assertEquals(LocalDate.of(2026, 10, 16), t.toLocalDate())
+        }
+    }
+
+    @Test
     fun weeklyOnlyOnPickedDays() {
         val sunday = base.copy(timing = Timing.FIXED, at = 21 * 60, days = 1 shl 6)
         val t = Schedule.next(sunday, LocalDateTime.of(2026, 10, 15, 12, 0))!!

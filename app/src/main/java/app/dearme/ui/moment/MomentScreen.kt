@@ -221,6 +221,9 @@ fun MomentScreen(callId: Long, data: DearData, go: Go) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(R.string.moment_opens, Words.lock(context, Lock.daysFor(ritual, data.capsules.minOfOrNull { it.createdAt }, data.now))), style = UType.Muted)
             }
+            if (ritual.lockDays == app.dearme.data.Ritual.LADDER) {
+                Words.ladderNote(context, data.capsules.minOfOrNull { it.createdAt }, data.now)?.let { Text(it, style = UType.Small) }
+            }
             Spacer(Modifier.height(20.dp))
         }
         Column(Modifier.navigationBarsPadding().padding(horizontal = 20.dp, vertical = 12.dp)) {

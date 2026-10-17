@@ -234,6 +234,9 @@ abstract class DearDao {
     @Query("SELECT * FROM calls WHERE id = :id")
     abstract suspend fun call(id: Long): Call?
 
+    @Query("SELECT MAX(firedAt) FROM calls WHERE ritualId = :ritualId")
+    abstract suspend fun lastCall(ritualId: Long): Long?
+
     @Insert
     abstract suspend fun insertCall(c: Call): Long
 

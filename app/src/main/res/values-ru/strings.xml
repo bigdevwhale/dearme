@@ -220,7 +220,7 @@
     <string name="two_minutes_desc">Сними сразу. На опоздавших ответах будет штамп.</string>
     <string name="needs_content">Выбери хотя бы фото, текст или голос.</string>
     <string name="opens_after_title">Откроется через</string>
-    <string name="ladder_explain">Постепенно: сначала через неделю, потом через месяц, а после первого года с DearMe — через год. Так открывать есть что с самого начала.</string>
+    <string name="ladder_explain">Срок растёт вместе с тобой: первые 4 недели с DearMe моменты открываются через неделю, до конца первого года — через месяц, дальше — через год. Так открывать есть что с самого начала.</string>
     <string name="try_now">Попробовать сейчас</string>
     <string name="try_now_desc">Сохранит ритуал и сразу тебя позовёт.</string>
     <string name="delete_ritual_title">Удалить ритуал?</string>
@@ -238,6 +238,7 @@
     <string name="opens_after">откроется через %s</string>
     <string name="lock_ladder">Постепенно</string>
     <string name="lock_ladder_short">открывается постепенно</string>
+    <string name="ladder_note">Постепенно: пока через %1$s, с %2$s — через %3$s.</string>
     <string name="tpl_random">Случайный момент</string>
     <string name="tpl_random_desc">Каждый день в неожиданное время. Две минуты, обе камеры, одна строка.</string>
     <string name="tpl_sunday">Воскресное письмо</string>

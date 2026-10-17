@@ -215,6 +215,10 @@ fun RitualScreen(id: Long, template: String, data: DearData, go: Go) {
             if (cur.lockDays == Ritual.LADDER) {
                 Spacer(Modifier.height(8.dp))
                 Text(stringResource(R.string.ladder_explain), style = UType.Muted)
+                Words.ladderNote(context, data.capsules.minOfOrNull { it.createdAt }, data.now)?.let {
+                    Spacer(Modifier.height(4.dp))
+                    Text(it, style = UType.Small.copy(color = U.c.accent))
+                }
             }
             Spacer(Modifier.height(22.dp))
             SoftButton(

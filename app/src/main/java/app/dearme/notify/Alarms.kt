@@ -106,8 +106,12 @@ object Alarms {
                 continue
             }
             var at = r.nextAt
-            if (at == 0L || at < now - GRACE_MS) {
-                at = nextFor(r, now, zone) ?: 0L
+            val last = dao.lastCall(r.id)
+            // Plans made before the once-a-day rule could point at a second call today.
+            val sameDay = last != null && at != 0L &&
+                Instant.ofEpochMilli(last).atZone(zone).toLocalDate() == Instant.ofEpochMilli(at).atZone(zone).toLocalDate()
+            if (at == 0L || at < now - GRACE_MS || sameDay) {
+                at = nextFor(r, now, last, zone) ?: 0L
                 dao.updateRitual(r.copy(nextAt = at))
             }
             if (at == 0L) {
@@ -127,8 +131,12 @@ object Alarms {
         else am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, maxOf(opening, now + 1000), openPi(context))
     }
 
-    fun nextFor(r: Ritual, after: Long, zone: ZoneId = ZoneId.systemDefault()): Long? =
-        Schedule.next(r, LocalDateTime.ofInstant(Instant.ofEpochMilli(after), zone))?.atZone(zone)?.toInstant()?.toEpochMilli()
+    /** The next call after [after]; never on the day of [lastCall], so a ritual calls at most once a day. */
+    fun nextFor(r: Ritual, after: Long, lastCall: Long?, zone: ZoneId = ZoneId.systemDefault()): Long? =
+        Schedule.next(
+            r, LocalDateTime.ofInstant(Instant.ofEpochMilli(after), zone),
+            skip = lastCall?.let { Instant.ofEpochMilli(it).atZone(zone).toLocalDate() },
+        )?.atZone(zone)?.toInstant()?.toEpochMilli()
 
     private suspend fun fireRitual(context: Context, id: Long) {
         val dao = context.container.db.dao()
@@ -138,7 +146,7 @@ object Alarms {
         if (!r.enabled || r.nextAt == 0L || r.nextAt > now + 60_000) return
         val deadline = if (r.timer) now + WINDOW_MS else now
         val callId = dao.insertCall(Call(ritualId = r.id, firedAt = now, deadline = deadline))
-        dao.updateRitual(r.copy(nextAt = nextFor(r, now + 60_000) ?: 0L))
+        dao.updateRitual(r.copy(nextAt = nextFor(r, now, lastCall = now) ?: 0L))
 
         if (!canNotify(context)) return
         val title = if (r.timer) context.getString(R.string.notif_moment_title) else r.name

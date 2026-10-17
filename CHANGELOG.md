@@ -2,6 +2,14 @@
 
 All notable changes to DearMe. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-17
+
+### Fixed
+- A ritual calls at most once a day. A random moment used to pick its next time later the same day, so it could call again and again until its window closed.
+
+### Changed
+- "Step by step" now says where it stands: how long moments stay sealed for now and from which day the wait grows (a week, then a month, then a year).
+
 ## [1.0.0] - 2026-10-15
 
 The first release.
