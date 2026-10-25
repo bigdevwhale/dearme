@@ -51,6 +51,7 @@ import app.dearme.ui.DearData
 import app.dearme.ui.Language
 import app.dearme.ui.Words
 import app.dearme.ui.components.Chip
+import app.dearme.ui.components.CommunityLinks
 import app.dearme.ui.components.ConfirmDialog
 import app.dearme.ui.components.SectionTitle
 import app.dearme.ui.components.TopBar
@@ -206,6 +207,8 @@ fun SettingsScreen(data: DearData, onBack: () -> Unit) {
                 Chip("English", current == Language.EN, { Language.set(Language.EN) })
                 Chip("Русский", current == Language.RU, { Language.set(Language.RU) })
             }
+
+            CommunityLinks()
 
             SectionTitle(stringResource(R.string.about))
             UCard {
