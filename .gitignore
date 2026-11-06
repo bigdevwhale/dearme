@@ -11,3 +11,7 @@
 .kotlin/
 *.keystore
 *.jks
+
+# Google Play listing, graphics and their build script stay local
+/docs/google-play/
+/tools/play.py
