@@ -340,4 +340,6 @@
     <string name="community_follow_sub">бот напишет, когда выйдет версия</string>
     <string name="community_chat">Чат StillCraft</string>
     <string name="community_chat_sub">все приложения и люди</string>
+    <string name="community_support">Поддержать DearMe</string>
+    <string name="community_support_sub">на новые конверты и письма сквозь годы</string>
 </resources>

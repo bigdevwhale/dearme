@@ -8,6 +8,15 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to DearMe. Versions follow [semantic versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- Settings -> Community has a "Support DearMe" line: it opens the StillCraft support page, for new envelopes and letters across the years.
+
+<!-- tg
+Новое: в Настройках, в разделе «Сообщество», появилась строчка «Поддержать DearMe» — на новые конверты и письма сквозь годы.
+-->
+
 ## [1.0.2] - 2026-10-25
 
 ### Added
