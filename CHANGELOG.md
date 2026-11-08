@@ -13,9 +13,7 @@ All notable changes to DearMe. Versions follow [semantic versioning](https://sem
 ### Added
 - Settings -> Community has a "Support DearMe" line: it opens the StillCraft support page, for new envelopes and letters across the years.
 
-<!-- tg
-Новое: в Настройках, в разделе «Сообщество», появилась строчка «Поддержать DearMe» — на новые конверты и письма сквозь годы.
--->
+<!-- tg skip -->
 
 ## [1.0.2] - 2026-10-25
 
