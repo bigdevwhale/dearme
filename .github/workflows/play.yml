@@ -56,5 +56,5 @@ jobs:
           packageName: app.dearme
           releaseFiles: ${{ steps.rel.outputs.aab }}
           releaseName: ${{ steps.rel.outputs.tag }}
-          track: ${{ github.event.inputs.track || 'production' }}
+          tracks: ${{ github.event.inputs.track || 'production' }}
           status: completed
