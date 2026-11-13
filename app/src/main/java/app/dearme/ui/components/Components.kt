@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -68,6 +69,15 @@ import app.dearme.ui.theme.Inter
 import app.dearme.ui.theme.U
 import app.dearme.ui.theme.UType
 import kotlinx.coroutines.delay
+
+/** One line that shrinks (down to [min]) rather than wrapping or being cut, for big system fonts on narrow phones. */
+@Composable
+fun FitText(text: String, style: androidx.compose.ui.text.TextStyle, modifier: Modifier = Modifier, min: androidx.compose.ui.unit.TextUnit = 11.sp, textAlign: androidx.compose.ui.text.style.TextAlign? = null) {
+    androidx.compose.foundation.text.BasicText(
+        text, modifier, style = if (textAlign != null) style.copy(textAlign = textAlign) else style, maxLines = 1, softWrap = false,
+        autoSize = androidx.compose.foundation.text.TextAutoSize.StepBased(minFontSize = min, maxFontSize = style.fontSize, stepSize = 1.sp),
+    )
+}
 
 @Composable
 fun UCard(modifier: Modifier = Modifier, onClick: (() -> Unit)? = null, padding: PaddingValues = PaddingValues(16.dp), content: @Composable ColumnScope.() -> Unit) {
@@ -169,14 +179,14 @@ fun <T> Segmented(options: List<T>, selected: T, label: @Composable (T) -> Strin
             Box(
                 Modifier
                     .weight(1f)
-                    .height(40.dp)
+                    .heightIn(min = 40.dp)
                     .clip(RoundedSm)
                     .background(if (on) U.c.surface else Color.Transparent)
                     .then(if (on) Modifier.border(1.dp, U.c.line, RoundedSm) else Modifier)
                     .clickable { onSelect(o) },
                 contentAlignment = Alignment.Center,
             ) {
-                Text(label(o), style = UType.Button.copy(fontSize = 14.sp), color = if (on) U.c.accent else U.c.muted)
+                FitText(label(o), UType.Button.copy(fontSize = 14.sp, color = if (on) U.c.accent else U.c.muted), Modifier.padding(horizontal = 6.dp), min = 9.sp)
             }
         }
     }

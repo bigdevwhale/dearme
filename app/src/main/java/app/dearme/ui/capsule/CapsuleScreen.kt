@@ -62,6 +62,7 @@ import app.dearme.ui.Go
 import app.dearme.ui.Words
 import app.dearme.ui.camera.CameraOverlay
 import app.dearme.ui.components.ConfirmDialog
+import app.dearme.ui.components.FitText
 import app.dearme.ui.components.DualPhoto
 import app.dearme.ui.components.Envelope
 import app.dearme.ui.components.PrimaryButton
@@ -153,7 +154,7 @@ private fun Sealed(c: Capsule, data: DearData, shots: Int) {
         Spacer(Modifier.height(6.dp))
         Text(Words.longDate(context, c.openAt), style = UType.Title, textAlign = TextAlign.Center)
         Spacer(Modifier.height(14.dp))
-        Text(Words.countdown(context, c.openAt - data.now), style = UType.Timer)
+        FitText(Words.countdown(context, c.openAt - data.now), UType.Timer, min = 20.sp)
         Spacer(Modifier.height(6.dp))
         Text(Words.inSpan(context, data.now, c.openAt), style = UType.Sub)
         Spacer(Modifier.height(26.dp))

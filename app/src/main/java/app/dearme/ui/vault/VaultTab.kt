@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -52,6 +53,7 @@ import app.dearme.ui.DearData
 import app.dearme.ui.Go
 import app.dearme.ui.Words
 import app.dearme.ui.components.Chip
+import app.dearme.ui.components.FitText
 import app.dearme.ui.components.Envelope
 import app.dearme.ui.components.IconDisc
 import app.dearme.ui.components.MediaImage
@@ -250,7 +252,7 @@ private fun NextHero(c: Capsule, data: DearData, onClick: () -> Unit) {
         Spacer(Modifier.height(18.dp))
         Text(stringResource(R.string.next_opens_in).uppercase(), style = UType.Eyebrow)
         Spacer(Modifier.height(6.dp))
-        Text(Words.countdown(context, c.openAt - data.now), style = UType.Timer.copy(fontSize = 34.sp))
+        FitText(Words.countdown(context, c.openAt - data.now), UType.Timer.copy(fontSize = 34.sp), min = 18.sp)
         Spacer(Modifier.height(4.dp))
         Text(Words.longDate(context, c.openAt) + " · " + Words.capsuleTitle(context, c, data.ritualsById[c.ritualId ?: -1]), style = UType.Muted, textAlign = TextAlign.Center)
     }
@@ -265,13 +267,13 @@ private fun SealedRow(c: Capsule, data: DearData, onClick: () -> Unit) {
             Envelope(Modifier.width(58.dp))
             Spacer(Modifier.width(14.dp))
             Column(Modifier.weight(1f)) {
-                Text(Words.capsuleTitle(context, c, data.ritualsById[c.ritualId ?: -1]), style = UType.Strong, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Text(stringResource(R.string.sealed_opens, Words.mediumDate(context, c.openAt)), style = UType.Muted, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(Words.capsuleTitle(context, c, data.ritualsById[c.ritualId ?: -1]), style = UType.Strong, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(stringResource(R.string.sealed_opens, Words.mediumDate(context, c.openAt)), style = UType.Muted, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Spacer(Modifier.height(4.dp))
                 Hints(c, photos.size)
             }
             Spacer(Modifier.width(8.dp))
-            Text(Words.span(context, data.now, c.openAt), style = UType.Small.copy(color = U.c.accent), textAlign = TextAlign.End, modifier = Modifier.width(78.dp))
+            Text(Words.span(context, data.now, c.openAt), style = UType.Small.copy(color = U.c.accent), textAlign = TextAlign.End, modifier = Modifier.widthIn(max = 96.dp))
         }
     }
 }

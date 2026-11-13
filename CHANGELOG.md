@@ -8,6 +8,15 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to DearMe. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.0.4] - 2026-11-13
+
+### Fixed
+- Narrow phones with a large system font (#1): the "Write" button and the countdown shrink to stay on one line instead of being cut off or wrapping; a sealed letter's title and opening date in the list may take two lines; the bottom bar and the segmented switches grow with the font.
+
+<!-- tg
+Исправлено: на узких экранах с крупным шрифтом кнопка «Написать» и таймер больше не обрезаются, а названия писем в списке видны целиком.
+-->
+
 ## [1.0.3] - 2026-11-08
 
 ### Added

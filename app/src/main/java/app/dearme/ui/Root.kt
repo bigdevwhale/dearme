@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -67,6 +68,7 @@ import app.dearme.data.Settings
 import app.dearme.notify.Alarms
 import app.dearme.ui.capsule.CapsuleScreen
 import app.dearme.ui.components.rememberNow
+import app.dearme.ui.components.FitText
 import app.dearme.ui.moment.MomentScreen
 import app.dearme.ui.onboarding.OnboardingScreen
 import app.dearme.ui.rituals.RitualScreen
@@ -201,19 +203,19 @@ private fun MainTabs(tab: Tab, onTab: (Tab) -> Unit, go: Go, data: DearData) {
         }
         HorizontalDivider(color = U.c.line)
         Row(
-            Modifier.fillMaxWidth().background(U.c.surface).navigationBarsPadding().height(70.dp).padding(horizontal = 8.dp),
+            Modifier.fillMaxWidth().background(U.c.surface).navigationBarsPadding().heightIn(min = 70.dp).padding(horizontal = 8.dp, vertical = 6.dp),
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             NavItem(Icons.Rounded.Inventory2, stringResource(R.string.tab_vault), tab == Tab.VAULT) { onTab(Tab.VAULT) }
             Box(Modifier.weight(1.5f), contentAlignment = Alignment.Center) {
                 Row(
-                    Modifier.shadow(6.dp, CircleShape).clip(CircleShape).background(U.c.accent).clickable { go.write() }.padding(horizontal = 20.dp, vertical = 12.dp),
+                    Modifier.shadow(6.dp, CircleShape).clip(CircleShape).background(U.c.accent).clickable { go.write() }.padding(horizontal = 18.dp, vertical = 12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Icon(Icons.Rounded.Edit, null, Modifier.size(19.dp), tint = U.c.onAccent)
                     Spacer(Modifier.size(8.dp))
-                    Text(stringResource(R.string.write), color = U.c.onAccent, fontFamily = Inter, fontSize = 15.sp, maxLines = 1)
+                    FitText(stringResource(R.string.write), androidx.compose.ui.text.TextStyle(color = U.c.onAccent, fontFamily = Inter, fontSize = 15.sp), min = 10.sp)
                 }
             }
             NavItem(Icons.Rounded.Schedule, stringResource(R.string.tab_rituals), tab == Tab.RITUALS) { onTab(Tab.RITUALS) }
